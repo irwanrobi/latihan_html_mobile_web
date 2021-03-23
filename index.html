@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="./assets/style.css">
+    <title>Teslo Mobile Web</title>
+    <link rel="shortcut icon" href="./assets/Tesla_T_symbol.png" type="image/x-icon">
+
+    <meta name="description" content="Belajar membuat website mobile">
+    <meta name="og:image" content="https://images.pexels.com/photos/714525/pexels-photo-714525.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"/>
+    <meta name="og:description" content="Belajar membuat website mobile" />
+    
+</head>
+<body>
+
+    <!-- WRAPPER -->
+    <div class="wrapper">
+
+        <!-- NAV BAR -->
+        <nav class="navbar">
+            <h1 class="brand" onclick="backToHome()">TESLO</h1>
+            <ul class="menu">
+                <li class="menu_item">
+                    <a onclick="scrollToHome()">Home</a>
+                </li>
+                <li class="menu_item">
+                    <a onclick="scrollToAbout()">About</a>
+                </li>
+                <li class="menu_item">
+                    <a onclick="scrollToContact()">Contact</a>
+                </li>
+                <li class="menu_item">
+                    <a onclick="scrollToGallery()">Gallery</a>
+                </li>
+            </ul>
+
+            <span class="material-icons" id="menu_icons" onclick="showMobileMenu()">
+                menu
+            </span>
+        </nav>
+        <!-- END NAV BAR -->
+
+        <!-- CONTENT -->
+        <section id="my_home">
+            <div class="content">
+                <button type="button" class="btn_secondary center" onclick="showModal()">Subscribe</button>
+            </div>
+        </section>
+
+        <section id="my_about">
+            <div class="content">
+                <h3 class="title"><span>My</span> About</h3>
+            </div>
+        </section>
+
+        <section id="my_contact">
+            <div class="content">
+                <h3 class="title"><span>My</span> Contact</h3>
+            </div>
+        </section>
+
+        <section id="my_gallery">
+            <div class="content">
+                <h3 class="title"><span>My</span> Gallery</h3>
+            </div>
+        </section>
+
+    </div>
+    <!-- end WRAPPER  -->
+
+    <!-- MOBILE MENU -->
+    <div class="mobile_menu" id="mobile_menu">
+        <div class="mobile_menu_item" onclick="scrollToHome()">
+            <a href="#">Home</a>
+        </div>
+        <div class="mobile_menu_item" onclick="scrollToAbout()">
+            <a href="#">About</a>
+        </div>
+        <div class="mobile_menu_item" onclick="scrollToContact()">
+            <a href="#">Contact</a>
+        </div>
+        <div class="mobile_menu_item" onclick="scrollToGallery()">
+            <a href="#">Gallery</a>
+        </div>
+    </div>
+    <!-- MOBILE MENU -->
+
+    <!-- SUBSCRIBE -->
+    <div class="sub_modal" id="sub_modal">
+        
+        <form action="" method="post" id="sub_form">
+
+            <label for="name">Nama Lengkap</label>
+            <input type="text" name="name" id="name" placeholder="masukkan nama anda">
+
+            <label for="no_hp">No. WhatsApp</label>
+            <input type="number" name="no_hp" id="no_hp" placeholder="masukkan nomor hp anda">
+
+            <label for="email">Alamat Email</label>
+            <input type="email" name="email" id="email" placeholder="masukkan email anda">
+
+            <button type="button" id="submit_button" onclick="thankYou()">subscribe</button>
+
+        </form>
+
+        <span class="material-icons" onclick="closeModal()">
+            expand_less
+        </span>
+
+    </div>
+    <!-- end SUBSCRIBE -->
+
+
+  
+<script src="./assets/main.js" type="text/javascript"></script>
+</body>
+</html>
